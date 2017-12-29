@@ -1,12 +1,14 @@
-[![](https://jitpack.io/v/liqinew/homeassemblyview.svg)](https://jitpack.io/#liqinew/homeassemblyview)
+[![](https://jitpack.io/v/liqinew/mytoast.svg)](https://jitpack.io/#liqinew/mytoast)
 [![](https://img.shields.io/badge/%E4%BD%9C%E8%80%85-%E6%9D%8E%E5%A5%87-orange.svg)](https://github.com/LiqiNew)
 # MyToast
 **在5.0以上系统上支持关闭系统通知权限后显示，支持自定toast视图显示。**<br><br>
 **MyToast借鉴于： [EToast2](https://github.com/Blincheng/EToast2)**
+
 #### MyToast的由来
 当用户在5.0以上系统上关闭系统通知权限之后，系统Toast也会显示不出。让我们去跟踪一下Toast的源码，我们发现Toast其实是通过NotificationManagerService维护一个Toast队列。
 然后通过队列去通知Toast中的客户端TN调用WindowManager去添加view显示。那么当用户关闭通知权限后自然也无法显示Toast了。
-#####解决思路
+
+##### 解决思路
 * 自己仿照系统的Toast然后用自己的消息队列来维护，让其不受NotificationManagerService影响。
 * 通过WindowManager自己来写一个通知。
 * 通过Dialog、PopupWindow来编写一个自定义通知。
@@ -29,7 +31,7 @@ allprojects {
 ```
 **2：依赖MyToast**<br>
 ```gradle
-compile 'com.github.liqinew:homeassemblyview:V.1.0.0'
+compile 'com.github.liqinew:mytoast:V.1.0.0'
 ```
 ### 使用方式
 **MyToast提供大量静态显示方法，请大家查阅MyToast对象API**
