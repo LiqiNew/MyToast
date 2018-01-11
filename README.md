@@ -31,7 +31,7 @@ allprojects {
 ```
 **2：依赖MyToast**<br>
 ```gradle
-compile 'com.github.liqinew:mytoast:V.1.0.0'
+compile 'com.github.liqinew:mytoast:V.1.0.1'
 ```
 ### 使用方式
 **MyToast提供大量静态显示方法，请大家查阅MyToast对象API**
